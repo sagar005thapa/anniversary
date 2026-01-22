@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>7 Months of Us ❤️</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="music/love.mp3" type="audio/mpeg">
+</audio>
+
+<div class="center">
+  <div class="heart">❤️</div>
+
+  <h1>
+    Happy 7 Months,
+    <span class="name">Mine Love Biji❤️</span>
+  </h1>
+
+  <p>Distance never stopped us… and never will.</p>
+
+  <h2 id="countdown"></h2>
+
+  <a href="journey.html" class="btn">Start Our Story 💕</a>
+</div>
+
+<script>
+const meetDate = new Date("2028-03-15").getTime(); // CHANGE DATE
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = meetDate - now;
+  if (diff < 0) {
+    document.getElementById("countdown").innerHTML = "We are together ❤️";
+    return;
+  }
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  document.getElementById("countdown").innerHTML =
+    `Days until we meet 🤍: ${days}`;
+}, 1000);
+</script>
+
+<script>
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.innerHTML = "💖";
+  heart.style.position = "fixed";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.bottom = "0";
+  heart.style.fontSize = "24px";
+  heart.style.animation = "floatUp 4s linear";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 4000);
+}, 500);
+</script>
+
+<script src="swipe.js"></script>
+</body>
+</html>
