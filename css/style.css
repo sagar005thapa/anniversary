@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  text-align: center;
+  padding: 40px;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heart {
+  font-size: 80px;
+  animation: beat 1s infinite;
+}
+
+.big {
+  font-size: 100px;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.2); }
+}
+
+.card, .promise, .letter {
+  background: rgba(255,255,255,0.25);
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 18px;
+  max-width: 520px;
+}
+
+.gallery img {
+  width: 90%;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 18px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  background: white;
+  color: #ff5f8a;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.name {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px white; }
+  to { text-shadow: 0 0 20px white, 0 0 40px pink; }
+}
+
+#countdown {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100vh); opacity: 0; }
+}
